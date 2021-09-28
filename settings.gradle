@@ -3,8 +3,10 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-        jcenter() // Warning: this repository is going to shut down soon
+         // Warning: this repository is going to shut down soon
     }
 }
 rootProject.name = "Majordome"
-include ':app'
+include ':presentation'
+include ':domain'
+include ':data'
