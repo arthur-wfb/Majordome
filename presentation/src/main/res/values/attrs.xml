@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ComponentInput">
+        <attr name="inputTitle" format="string" />
+        <attr name="inputHint" format="string" />
+        <attr name="isDropDown" format="boolean" />
+        <attr name="isEnabled" format="boolean" />
+        <attr name="lines" format="integer" />
+        <attr name="isDatePicker" format="boolean" />
+        <attr name="isTimePicker" format="boolean" />
+
+    </declare-styleable>
+
+</resources>

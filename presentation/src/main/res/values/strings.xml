@@ -11,4 +11,19 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="create_event_button">CREATE</string>
+    <string name="ok">OK</string>
+
+    <string name="title">Title</string>
+    <string name="category">Category</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+    <string name="description">Description</string>
+
+    <string name="enter_the_title">Enter the title</string>
+    <string name="enter_the_category">Choose the category</string>
+    <string name="enter_the_date">Enter the date</string>
+    <string name="enter_the_time">Enter the time</string>
+    <string name="enter_the_description">Write the description</string>
+    <string name="events_list">Events list</string>
 </resources>
