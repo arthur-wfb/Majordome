@@ -9,7 +9,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Events list"
+        android:text="@string/events_list"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -17,10 +17,10 @@
 
     <Button
         android:id="@+id/create_event_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/ButtonsStyle"
+        android:layout_width="270dp"
         android:layout_marginBottom="32dp"
-        android:text="Button"
+        android:text="@string/create_event_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

@@ -2,16 +2,79 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/confirm"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.CreateEventFragment">
 
-    <TextView
+
+    <com.tooru.majordome.ui.custom.ComponentInput
+        android:id="@+id/title_input"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Create Event Fragment"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="64dp"
+        app:inputHint="@string/enter_the_title"
+        app:inputTitle="@string/title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <com.tooru.majordome.ui.custom.ComponentInput
+        android:id="@+id/category_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:inputHint="@string/enter_the_category"
+        app:inputTitle="@string/category"
+        app:isDropDown="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_input" />
+
+    <com.tooru.majordome.ui.custom.ComponentInputDateTimePicker
+        android:id="@+id/date_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:inputHint="@string/enter_the_date"
+        app:inputTitle="@string/date"
+        app:isDatePicker="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/category_input" />
+
+    <com.tooru.majordome.ui.custom.ComponentInputDateTimePicker
+        android:id="@+id/time_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:inputHint="@string/enter_the_time"
+        app:inputTitle="@string/time"
+        app:isTimePicker="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/date_input" />
+
+    <com.tooru.majordome.ui.custom.ComponentInput
+        android:id="@+id/description_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:inputHint="@string/enter_the_description"
+        app:inputTitle="@string/description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/time_input"
+        app:lines="4" />
+
+    <Button
+        android:id="@+id/button"
+        style="@style/ButtonsStyle"
+        android:layout_width="270dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/ok"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
