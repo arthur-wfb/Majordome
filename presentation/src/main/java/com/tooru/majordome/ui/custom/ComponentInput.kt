@@ -15,13 +15,23 @@ import com.tooru.majordome.useObtainedStyledAttributes
 open class ComponentInput(context: Context, attrs: AttributeSet) : FrameLayout(context, attrs) {
 
 
+    private var input: EditText
+
     init {
-        LayoutInflater.from(getContext()).inflate(R.layout.component_input, this);
+        LayoutInflater.from(getContext()).inflate(R.layout.component_input, this)
+
+        input = findViewById(R.id.componentInput)
 
         context.useObtainedStyledAttributes(attrs, R.styleable.ComponentInput) {
             readArray(it)
         }
     }
+
+
+    val text
+        get() =
+            input.text.toString()
+
 
     open fun readArray(array: TypedArray) {
         val title = array.getString(R.styleable.ComponentInput_inputTitle)
@@ -29,17 +39,11 @@ open class ComponentInput(context: Context, attrs: AttributeSet) : FrameLayout(c
         val isDropDown = array.getBoolean(R.styleable.ComponentInput_isDropDown, false)
         val lines = array.getInt(R.styleable.ComponentInput_lines, 1)
 
-        val input = findViewById<EditText>(R.id.componentInput)
         findViewById<TextView>(R.id.inputTitle).text = title
         input.hint = hint
         input.setLines(lines)
 
-
-
-
         findViewById<ImageView>(R.id.dropdown_icon).visibility =
             if (isDropDown) View.VISIBLE else View.GONE
     }
-
-
 }

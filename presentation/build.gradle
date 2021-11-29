@@ -37,6 +37,9 @@ android {
 }
 
 dependencies {
+    implementation project(path: ':domain')
+    implementation project(path: ':data')
+
     def hilt_version = "2.38.1"
     def nav_version = "2.3.5"
     def material_version = "1.4.0"
