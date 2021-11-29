@@ -4,6 +4,8 @@ import android.content.Context
 import android.content.res.TypedArray
 import android.util.AttributeSet
 import androidx.annotation.StyleableRes
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 
 /**
  * Получает [TypedArray], запускает лямбду [action], осуществляет освобождение ресурсов для [TypedArray]
@@ -24,3 +26,8 @@ inline fun Context.useObtainedStyledAttributes(
         a?.recycle()
     }
 }
+
+/**
+ * Конвертирует MutableLiveData в LiveData
+ */
+fun <T> MutableLiveData<T>.asLiveData(): LiveData<T> = this
